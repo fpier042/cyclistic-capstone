@@ -32,7 +32,7 @@ cyclistic-capstone/
 
 
 ## 📝 Installation & Reproducibility
-1.  Clone the repository.
+1.  Clone the repository: https://github.com/fpier042/cyclistic-capstone.git
 2.  Install dependencies: `pip install -r requirements.txt`
 3.  The analysis relies on the Divvy System Data (Jan-Aug 2024)—download the source files separately.
 
