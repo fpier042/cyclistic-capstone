@@ -38,4 +38,4 @@ cyclistic-capstone/
 
 ## 🔗 Project Links
 -   **Live Portfolio**: (https://sites.google.com/view/my-data-portfolio-feltonpierre/capstone-project)
--   **HTML Presentation**: [Your Hosted GitHub Pages Link] (e.g., `https://fpier042.github.io/cyclistic-capstone/cyclistic_presentation.html`)
+-   **HTML Presentation**: (https://fpier042.github.io/cyclistic-capstone/cyclistic_presentation.html)
