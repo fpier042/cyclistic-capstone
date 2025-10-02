@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyclistic Bike-Share Analysis: Conversion Strategy</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #1a1a1a;
+            overflow: hidden; 
+        }
+        .slide {
+            height: 100vh;
+            width: 100vw;
+            display: none; 
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            padding: 50px;
+            box-sizing: border-box;
+            background: linear-gradient(135deg, #ffffff, #f0f7ff);
+            position: absolute;
+            top: 0;
+            left: 100%;
+            transition: left 0.5s ease-in-out;
+        }
+        .slide.active {
+            left: 0;
+            display: flex; 
+        }
+        h1 { color: #0066cc; font-size: 3.5em; margin-bottom: 10px; padding-top: 20px; }
+        h2 { color: #004080; font-size: 2.2em; margin-bottom: 25px; }
+        p { color: #5f6368; font-size: 1.4em; max-width: 850px; margin: 10px auto; }
+        ul { font-size: 1.3em; text-align: left; max-width: 800px; margin: 20px auto; color: #333; }
+        li { margin-bottom: 10px; }
+        .viz-box {
+            max-width: 90%;
+            max-height: 70vh;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 15px;
+            background-color: white;
+        }
+        .viz-box img {
+            width: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+        .key-metric {
+            font-size: 1.6em;
+            color: #ff6200; 
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .act-recommendation {
+            color: #00874c; 
+            font-weight: bold;
+            font-size: 2.2em;
+        }
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 14px;
+            color: #0066cc;
+        }
+        .summary-metrics {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin-top: 30px;
+        }
+        .metric-card {
+            width: 30%;
+            background-color: #e6f0fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #0066cc;
+        }
+        .metric-card h3 {
+            font-size: 2.5em;
+            color: #0066cc;
+            margin: 0 0 5px 0;
+        }
+        .metric-card p {
+            font-size: 1em;
+            color: #333;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="slide active" id="slide-0">
+            <h1>Cyclistic Conversion Strategy</h1>
+            <h2>Data-Driven Path to Convert Casual Riders to Annual Members</h2>
+            <p>Prepared by Felton Pierre | Cyclistic Capstone Project | September 2025</p>
+            <p style="margin-top: 40px; color: #004080;">**Click, Spacebar, or Arrow Keys to navigate.**</p>
+            <div class="footer">Slide 1/7</div>
+        </div>
+        <div class="slide" id="slide-1">
+            <h2>Executive Summary: The Core Divide</h2>
+            <div class="viz-box" style="max-height: 50vh;">
+                <img src="https://raw.githubusercontent.com/fpier042/cyclistic-capstone/main/images/01_executive_dashboard.jpg" alt="Executive Summary Dashboard">
+            </div>
+            <p class="key-metric">Analysis of ~3.8M trips confirms Casual Riders take **1.8x longer trips**.</p>
+            <p>The majority of trips are by Members (63.2%), but the largest conversion opportunity lies with the highly engaged, seasonal group of Casual Riders (36.8%).</p>
+            <div class="footer">Slide 2/7</div>
+        </div>
+        <div class="slide" id="slide-2">
+            <h2>Insight: Seasonal Growth & Weekend Focus</h2>
+            <div class="viz-box" style="max-height: 55vh;">
+                <img src="https://raw.githubusercontent.com/fpier042/cyclistic-capstone/main/images/04_seasonal_opportunity.jpg" alt="Seasonal Conversion Opportunity">
+            </div>
+            <p class="key-metric">Casual ridership grows a massive **13x from Jan to Aug**.</p>
+            <p>With **38.3% of casual trips on weekends**, the Summer season is the high-impact conversion window. Campaigns must be leisure-focused.</p>
+            <div class="footer">Slide 3/7</div>
+        </div>
+        <div class="slide" id="slide-3">
+            <h2>Insight: Targeting High-Value Geographic Hubs</h2>
+            <div class="viz-box" style="max-height: 60vh;">
+                <img src="https://raw.githubusercontent.com/fpier042/cyclistic-capstone/main/images/05_geographic_insights.jpg" alt="Geographic Usage Patterns">
+            </div>
+            <p class="key-metric">The Top 20% of stations drive **89% of Casual usage**.</p>
+            <p>Casuals heavily favor tourist and waterfront locations (e.g., Shedd Aquarium). Physical marketing should be deployed here for maximum ROI.</p>
+            <div class="footer">Slide 4/7</div>
+        </div>
+        <div class="slide" id="slide-4">
+            <h2>Key Behavioral Metrics: Leisure vs. Commuter</h2>
+            <div class="viz-box" style="max-width: 800px; max-height: 50vh;">
+                <img src="https://raw.githubusercontent.com/fpier042/cyclistic-capstone/main/images/06_key_metrics_dashboard.png" alt="Key Behavioral Differences Dashboard">
+            </div>
+            <p class="key-metric">**Business Insight:** Conversion strategies must market the membership for recreational, weekend, and seasonal use.</p>
+            <p>The data clearly shows the need for a targeted approach that is distinct from standard commuting campaigns.</p>
+            <div class="footer">Slide 5/7</div>
+        </div>
+        <div class="slide" id="slide-5">
+            <h2>ACT: Data-Driven Recommendations</h2>
+            <p style="font-size: 1.6em; color: #004080; font-weight: bold;">Three Strategies to Capture the Leisure Rider:</p>
+            <ul>
+                <li>**Summer Conversion Blitz:** Aggressive campaigns during the 13x growth window (May-Aug).</li>
+                <li>**Weekend Warrior Membership:** New tiered product targeting the **38.3%** weekend user base.</li>
+                <li>**Location-Based Hubs:** Direct marketing at tourist-heavy stations (Viz 5).</li>
+            </ul>
+            <p style="margin-top: 30px; font-size: 1.8em; color: #00874c; font-weight: bold;">Expected Impact: **15% Revenue Lift** from Conversions.</p>
+            <div class="footer">Slide 6/7</div>
+        </div>
+        <div class="slide" id="slide-6">
+            <h1>Thank You!</h1>
+            <h2>Ready to Move from Insight to Action.</h2>
+            <p style="font-size: 2em; color: #4285f4;">Next Steps: Q1 2026 Pilot of the Weekend Warrior Membership and Summer Blitz prep.</p>
+            <div class="footer">Slide 7/7</div>
+        </div>
+    </div>
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+        function showSlide(index) {
+            if (index >= 0 && index < slides.length) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === index) {
+                        slide.classList.add('active');
+                    }
+                });
+                currentSlide = index;
+            }
+        }
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                showSlide(currentSlide + 1);
+            }
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === ' ' || e.key === 'ArrowRight') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                showSlide(currentSlide - 1);
+            }
+        });
+        document.addEventListener('click', nextSlide);
+        showSlide(0);
+    </script>
+</body>
+</html>
